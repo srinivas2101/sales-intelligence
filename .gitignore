@@ -1,0 +1,5 @@
+.vscode/  
+node_modules/  
+venv/  
+ml_service/venv/  
+frontend/node_modules/ 
