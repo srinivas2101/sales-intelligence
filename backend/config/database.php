@@ -1,11 +1,14 @@
 <?php
 
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'business_intelligence');
+define('DB_HOST', 'sql104.infinityfree.com');
+define('DB_USER', 'if0_41692289');
+define('DB_PASS', 'NvTs7W44fY');
+define('DB_NAME', 'if0_41692289_sales_intelligence');
 define('ML_SERVICE_URL', 'http://localhost:5000');
-
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { http_response_code(200); exit(); }
 class Database {
     private static $instance = null;
     private $conn;

@@ -1,7 +1,5 @@
 -- Business Intelligence Database Schema
 -- Fresh start from 2026 — no old sample data
-CREATE DATABASE IF NOT EXISTS `business_intelligence`;
-USE `business_intelligence`;
 
 CREATE TABLE IF NOT EXISTS products (
     id            INT AUTO_INCREMENT PRIMARY KEY,
