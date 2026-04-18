@@ -76,7 +76,7 @@ export default function ProductRankings({ user }) {
       </div>
 
       {/* 4 KPI Cards */}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
+      <div className="rg-4" style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
         {[
           {icon:'💰',label:`${period}-Day Revenue`,val:INR(totalRevenue),sub:`${rankings.filter(p=>p.revenue>0).length} products sold`,color:'#2d7a3a',bg:'#e8f5e9'},
           {icon:'💹',label:`${period}-Day Profit`,val:INR(totalProfit),sub:`${totalRevenue>0?((totalProfit/totalRevenue)*100).toFixed(1):0}% margin`,color:'#0ea5e9',bg:'#f0f9ff'},

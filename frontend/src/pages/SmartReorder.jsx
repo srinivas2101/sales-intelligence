@@ -108,7 +108,7 @@ export default function SmartReorder() {
 
   return (
     <div className="fade-up">
-      <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
+      <div className="kpi-grid rg-4" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
         <div className="kpi-card" style={{ '--kpi-color': '#dc2626', '--kpi-bg': '#fee2e2' }}>
           <div className="kpi-icon">🚨</div>
           <div className="kpi-label">Critical Items</div>

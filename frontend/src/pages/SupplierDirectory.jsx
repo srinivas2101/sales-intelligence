@@ -51,7 +51,7 @@ export default function SupplierDirectory() {
 
   return (
     <div className="fade-up">
-      <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
+      <div className="kpi-grid rg-4" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
         <div className="kpi-card" style={{ '--kpi-color': '#2d7a3a', '--kpi-bg': '#e8f5e9' }}>
           <div className="kpi-icon">🏪</div>
           <div className="kpi-label">Total Suppliers</div>
@@ -91,7 +91,7 @@ export default function SupplierDirectory() {
       {showForm && (
         <div className="card fade-up" style={{ marginBottom: 16, borderColor: '#4caf50' }}>
           <div className="card-head"><div className="card-title">{editId ? '✏️ Edit Supplier' : '➕ New Supplier'}</div></div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 12 }}>
+          <div className="rg-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 12 }}>
             <div className="form-group" style={{ gridColumn: 'span 2' }}>
               <label className="form-label">Company Name *</label>
               <input value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="Supplier name" />

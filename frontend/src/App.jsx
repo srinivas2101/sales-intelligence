@@ -57,7 +57,19 @@ const pages = {
 export default function App() {
   const [user, setUser] = useState(null);
   const [active, setActive] = useState(null);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(window.innerWidth > 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      if (!mobile) setOpen(true);
+      else setOpen(false);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => { document.body.classList.toggle('dark-mode', darkMode); }, [darkMode]);
@@ -97,6 +109,12 @@ export default function App() {
         <div className="sidebar-brand">
           <div className="brand-icon">🛒</div>
           {open && <div><div className="brand-name">Business Intelligence</div></div>}
+          {isMobile && (
+            <button onClick={() => setOpen(o => !o)} style={{
+              background:'none', border:'none', fontSize:22,
+              cursor:'pointer', marginRight:8, color:'var(--text)'
+            }}>☰</button>
+          )}
           <button className="sidebar-toggle" onClick={() => setOpen(!open)}>{open ? '◀' : '▶'}</button>
         </div>
 

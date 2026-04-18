@@ -52,7 +52,7 @@ export default function RiskAlerts({ user }) {
       </div>
 
       {/* 4 KPI Cards */}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
+      <div className="rg-4" style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
         {[['CRITICAL','🚨','#dc2626','#fee2e2',`${INR(criticalValue)} at risk`],['HIGH','🔴','#ea580c','#ffedd5','urgent attention'],['MEDIUM','🟡','#d97706','#fef3c7','monitor closely'],['LOW','✅','#2d7a3a','#e8f5e9','healthy status']].map(([lvl,icon,color,bg,sub])=>(
           <div key={lvl} onClick={()=>setFilter(filter===lvl?'ALL':lvl)}
             style={{background:bg,borderRadius:14,padding:16,cursor:'pointer',border:`2px solid ${filter===lvl?color:'transparent'}`,transition:'all .15s'}}>

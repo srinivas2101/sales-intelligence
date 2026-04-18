@@ -62,7 +62,7 @@ export default function CustomerIntelligence({ user }) {
       </div>
 
       {/* 4 KPI Cards */}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
+      <div className="rg-4" style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
         {[
           {icon:'👥',label:'Total Customers',val:customers.length,sub:'Active accounts',color:'#2d7a3a',bg:'#e8f5e9'},
           {icon:'💰',label:'Customer Revenue',val:INR(totalRev),sub:`${INR(loyalRev)} from loyal`,color:'#f59e0b',bg:'#fffbeb'},
@@ -78,7 +78,7 @@ export default function CustomerIntelligence({ user }) {
         ))}
       </div>
 
-      <div style={{display:'grid',gridTemplateColumns:'1fr 280px',gap:16,marginBottom:16}}>
+      <div className="rg-split" style={{display:'grid',gridTemplateColumns:'1fr 280px',gap:16,marginBottom:16}}>
         {/* Segment cards */}
         <div style={{display:'flex',flexDirection:'column',gap:8}}>
           {segStats.map(s=>(

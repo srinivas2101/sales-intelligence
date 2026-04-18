@@ -246,7 +246,7 @@ export default function NotificationCenter({ user }) {
       )}
 
       {/* KPI Cards */}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:10,marginBottom:14}}>
+      <div className="rg-4" style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:10,marginBottom:14}}>
         {[
           {icon:'🚨',label:'Critical',    val:counts.critical,color:'#dc2626',bg:'#fee2e2'},
           {icon:'📦',label:'Stock',       val:counts.stock,   color:'#d97706',bg:'#fef3c7'},

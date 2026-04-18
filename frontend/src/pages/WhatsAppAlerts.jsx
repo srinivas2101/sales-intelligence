@@ -96,8 +96,8 @@ const sendViaProxy = async (to, message, config) => {
 export default function WhatsAppAlerts({ user }) {
   const [riskData, setRiskData] = useState([]);
   const [config, setConfig] = useState({
-    accountSid: process.env.REACT_APP_TWILIO_SID,
-    authToken: process.env.REACT_APP_TWILIO_TOKEN,
+    accountSid: 'ACee256bd0eba13c8ffe15b78bf422fe6c',
+    authToken: '8d3b79837a73cb8119c89030733ca65e',
     ownerPhone: '+919150603323',
     ownerName: 'Sri',
   });
@@ -219,7 +219,7 @@ export default function WhatsAppAlerts({ user }) {
       )}
 
       {/* KPI cards */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 12, marginBottom: 20 }}>
+      <div className="rg-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 12, marginBottom: 20 }}>
         {[
           ['🚨', 'CRITICAL', counts.CRITICAL, '#dc2626', '#fee2e2'],
           ['⚡', 'HIGH', counts.HIGH, '#ea580c', '#ffedd5'],

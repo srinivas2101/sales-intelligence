@@ -66,7 +66,7 @@ export default function OfferManager() {
 
   return (
     <div className="fade-up">
-      <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
+      <div className="kpi-grid rg-4" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
         <div className="kpi-card" style={{ '--kpi-color': '#2d7a3a', '--kpi-bg': '#e8f5e9' }}>
           <div className="kpi-icon">🏷️</div>
           <div className="kpi-label">Active Offers</div>
@@ -105,7 +105,7 @@ export default function OfferManager() {
       {showForm && (
         <div className="card fade-up" style={{ marginBottom: 16, borderColor: '#25d366' }}>
           <div className="card-head"><div className="card-title">🏷️ Create New Offer</div></div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 12 }}>
+          <div className="rg-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 12 }}>
             <div className="form-group" style={{ gridColumn: 'span 2' }}>
               <label className="form-label">Offer Name *</label>
               <input value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="e.g. Weekend Special" />

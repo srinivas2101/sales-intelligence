@@ -51,7 +51,7 @@ export default function ExpiryTracker({ user }) {
       </div>
 
       {/* 4 KPI Cards */}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
+      <div className="rg-4" style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
         {[
           {icon:'🔴',label:'Critical (≤2 days)',val:critical.length,sub:`${INR(totalLoss)} at risk`,color:'#dc2626',bg:'#fee2e2',filter:'Critical'},
           {icon:'🟠',label:'This Week (≤5d)',val:thisWeek.length,sub:`${INR(weekLoss)} stock value`,color:'#ea580c',bg:'#ffedd5',filter:'This Week'},
@@ -75,7 +75,7 @@ export default function ExpiryTracker({ user }) {
       )}
 
       {/* Action Tips */}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:12,marginBottom:14}}>
+      <div className="rg-3" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:12,marginBottom:14}}>
         {[
           {col:'#fee2e2',bc:'#fca5a5',tc:'#dc2626',dc:'#7f1d1d',title:'🔴 Immediate Action',tips:'Apply 30–50% discount • Bundle with fast-movers • Contact supplier for return/credit note'},
           {col:'#fef3c7',bc:'#fcd34d',tc:'#92400e',dc:'#78350f',title:'🟡 This Week Plan',tips:'Apply 10–20% discount • Place near checkout • Add to combo offers • Promote on WhatsApp'},

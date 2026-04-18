@@ -116,7 +116,7 @@ export default function PurchaseOrders() {
   return (
     <div className="fade-up">
       {/* KPIs */}
-      <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
+      <div className="kpi-grid rg-4" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
         <div className="kpi-card" style={{ '--kpi-color': '#dc2626', '--kpi-bg': '#fee2e2' }}>
           <div className="kpi-icon">🚨</div>
           <div className="kpi-label">Need Reorder</div>
@@ -179,7 +179,7 @@ export default function PurchaseOrders() {
       {showForm && (
         <div className="card fade-up" style={{ marginBottom: 16, borderColor: '#4caf50' }}>
           <div className="card-head"><div className="card-title">➕ New Purchase Order</div></div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 12 }}>
+          <div className="rg-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 12 }}>
             <div className="form-group" style={{ gridColumn: 'span 2' }}>
               <label className="form-label">Product Name</label>
               <input value={form.product} onChange={e => setForm({ ...form, product: e.target.value })} placeholder="e.g. Tata Salt 1kg" />

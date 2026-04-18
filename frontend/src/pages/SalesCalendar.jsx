@@ -399,7 +399,7 @@ export default function SalesCalendar() {
         ))}
       </div>
 
-      <div style={{display:'grid',gridTemplateColumns:'1fr 260px',gap:16}}>
+      <div className="rg-split" style={{display:'grid',gridTemplateColumns:'1fr 260px',gap:16}}>
         {/* CALENDAR */}
         <div className="card">
           <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:18}}>

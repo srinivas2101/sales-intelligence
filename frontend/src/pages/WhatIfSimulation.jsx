@@ -73,7 +73,7 @@ export default function WhatIfSimulation({ user }) {
       </div>
 
       {/* 4 KPI Cards */}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
+      <div className="rg-4" style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
         {[
           {icon:'🧪',label:'Scenarios Saved',val:scenarios.length,sub:'This session',color:'#7c3aed',bg:'#f5f3ff'},
           {icon:'💰',label:'Best Scenario Profit',val:scenarios.length>0?INR(Math.max(...scenarios.map(s=>s.result?.projected?.profit||0))):'—',sub:'Highest projected',color:'#2d7a3a',bg:'#e8f5e9'},
@@ -89,7 +89,7 @@ export default function WhatIfSimulation({ user }) {
         ))}
       </div>
 
-      <div style={{display:'grid',gridTemplateColumns:'240px 1fr',gap:16}}>
+      <div className="rg-split" style={{display:'grid',gridTemplateColumns:'240px 1fr',gap:16}}>
         {/* Product selector */}
         <div className="card" style={{padding:16,alignSelf:'flex-start'}}>
           <div style={{fontWeight:700,color:'#0f2d14',marginBottom:10,fontSize:13}}>📦 Select Product</div>

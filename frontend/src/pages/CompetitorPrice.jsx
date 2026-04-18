@@ -64,7 +64,7 @@ export default function CompetitorPrice({ user }) {
       </div>
 
       {/* 4 KPI Cards */}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
+      <div className="rg-4" style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
         {[
           {icon:'🏆',label:'Cheaper Than Competitors',val:cheaper,sub:`${withComp.length>0?((cheaper/withComp.length)*100).toFixed(0):0}% of catalog`,color:'#2d7a3a',bg:'#e8f5e9'},
           {icon:'⚠️',label:'More Expensive',val:expensive,sub:'May lose customers',color:'#dc2626',bg:'#fee2e2'},

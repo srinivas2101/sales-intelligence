@@ -96,7 +96,7 @@ export default function Products({ user }) {
       </div>
 
       {/* 4 Stock KPI Cards */}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
+      <div className="rg-4" style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
         {[
           {icon:'📦',label:'Total Products',val:products.length,sub:`${INR(totalValue)} stock value`,color:'#2d7a3a',bg:'#e8f5e9',filter:'all'},
           {icon:'✅',label:'Healthy Stock',val:healthy,sub:`${products.length>0?((healthy/products.length)*100).toFixed(0):0}% of catalog`,color:'#059669',bg:'#ecfdf5',filter:'ok'},

@@ -155,7 +155,7 @@ export default function Dashboard() {
       </div>
 
       {/* ROW 1: Revenue trend + Category bar */}
-      <div style={{display:'grid',gridTemplateColumns:'3fr 2fr',gap:12,marginBottom:12}}>
+      <div className="rg-split" style={{display:'grid',gridTemplateColumns:'3fr 2fr',gap:12,marginBottom:12}}>
 
         <div className="card" style={{padding:14}}>
           <div style={{fontWeight:800,color:'#0f2d14',marginBottom:10,fontSize:13}}>
@@ -198,7 +198,7 @@ export default function Dashboard() {
       </div>
 
       {/* ROW 2: Top Products + Payment & Pie stacked */}
-      <div style={{display:'grid',gridTemplateColumns:'3fr 2fr',gap:12,marginBottom:12}}>
+      <div className="rg-split" style={{display:'grid',gridTemplateColumns:'3fr 2fr',gap:12,marginBottom:12}}>
 
         <div className="card" style={{padding:14,paddingBottom:8}}>
           <div style={{fontWeight:800,color:'#0f2d14',marginBottom:10,fontSize:13}}>🏆 Top Products (30 days)</div>
@@ -278,7 +278,7 @@ export default function Dashboard() {
       </div>
 
       {/* ROW 3: Daily Transactions + Stock Health */}
-      <div style={{display:'grid',gridTemplateColumns:'3fr 2fr',gap:12}}>
+      <div className="rg-split" style={{display:'grid',gridTemplateColumns:'3fr 2fr',gap:12}}>
 
         <div className="card" style={{padding:14}}>
           <div style={{fontWeight:800,color:'#0f2d14',marginBottom:10,fontSize:13}}>🧾 Daily Transactions (30 days)</div>

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sales-intelligence/frontend/build/static/css/main.c09fc481.css",
+    "main.js": "/sales-intelligence/frontend/build/static/js/main.7b7b1436.js",
+    "index.html": "/sales-intelligence/frontend/build/index.html",
+    "main.c09fc481.css.map": "/sales-intelligence/frontend/build/static/css/main.c09fc481.css.map",
+    "main.7b7b1436.js.map": "/sales-intelligence/frontend/build/static/js/main.7b7b1436.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c09fc481.css",
+    "static/js/main.7b7b1436.js"
+  ]
+}

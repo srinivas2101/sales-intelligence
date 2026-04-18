@@ -56,7 +56,7 @@ export default function LoginPage({ onLogin }) {
   };
 
   return (
-    <div style={S.page}>
+    <div className="lp-page" style={S.page}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap');
 
@@ -90,10 +90,36 @@ export default function LoginPage({ onLogin }) {
 
         .cred-row:hover { background: #f8fafc !important; cursor: pointer; }
         .show-pw:hover  { opacity: 1 !important; }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+          .lp-page { flex-direction: column !important; }
+          .lp-left { display: none !important; }
+          .lp-right {
+            padding: 32px 20px !important;
+            min-height: 100vh;
+            justify-content: center;
+          }
+          .lp-wrap { width: 100% !important; max-width: 100% !important; }
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+          .rg-4, .rg-3 { grid-template-columns: 1fr 1fr !important; }
+          .rg-2 { grid-template-columns: 1fr !important; }
+          .rg-split { grid-template-columns: 1fr !important; }
+          .rg-cal { grid-template-columns: repeat(4,1fr) !important; }
+          .page-wrap { padding: 10px !important; }
+          .tbl-scroll { overflow-x: auto !important; display: block !important; }
+          .hide-mobile { display: none !important; }
+        }
+        @media (max-width: 480px) {
+          .rg-4, .rg-3, .rg-2 { grid-template-columns: 1fr !important; }
+        }
       `}</style>
 
       {/* Left panel — branding */}
-      <div style={S.left}>
+      <div className="lp-left" style={S.left}>
         <div style={S.leftInner}>
           <div style={S.logoBox}>🛒</div>
           <div style={S.logoName}>BUSINESS</div>
@@ -129,7 +155,7 @@ export default function LoginPage({ onLogin }) {
       </div>
 
       {/* Right panel — login form */}
-      <div style={S.right}>
+      <div className="lp-right" style={S.right}>
         <div className="lp-wrap" style={S.card}>
 
           {/* Header */}

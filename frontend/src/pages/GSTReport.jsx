@@ -66,7 +66,7 @@ export default function GSTReport({ user }) {
       </div>
 
       {/* 4 KPI Cards */}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
+      <div className="rg-4" style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
         {[
           {icon:'🧾',label:"Today's Output GST",val:INR(todayGST.output),sub:'Tax collected today',color:'#dc2626',bg:'#fee2e2'},
           {icon:'🔖',label:"Today's Input Credit",val:INR(todayGST.input),sub:'Credit claimable',color:'#2d7a3a',bg:'#e8f5e9'},
