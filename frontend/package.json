@@ -1,6 +1,5 @@
 {
   "name": "frontend",
-  "homepage": "/sales-intelligence/frontend/build",
   "version": "1.0.0",
   "private": true,
   "proxy": "http://localhost",
